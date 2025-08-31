@@ -122,9 +122,19 @@ DASHSCOPE_API_KEY="your-dashscope-api-key"
 ### 4. 📊 初始化向量数据
 
 ```bash
-# 数据向量化预处理
-python srd/data/sofa_data_preprocessor.py
+### 4. 🗄️ 数据库初始化
+
+**重要**: 在启动系统前，需要先初始化 OceanBase 数据库
+
+```bash
+# 第1步: 验证环境配置
+python test_environment.py
+
+# 第2步: 初始化数据库（创建表结构和插入测试数据）
+python init_database.py
 ```
+
+💡 详细的数据库初始化说明请参考 [DATABASE_INIT.md](DATABASE_INIT.md)
 
 ### 5. 🎉 启动系统
 
