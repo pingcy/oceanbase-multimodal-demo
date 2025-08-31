@@ -74,6 +74,9 @@ def cosine_similarity(vec1: List[float], vec2: List[float]) -> float:
     return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 
 # 沙发产品测试数据
+# ⚠️ 注意：以下是演示用的测试数据，请根据实际业务需求进行修改
+# 可以替换为任何类型的产品数据（如电子产品、服装、家具等）
+# 修改时请保持数据结构的一致性，确保向量化处理正常工作
 SAMPLE_SOFA_DATA = [
     {
         "name": "北欧简约三人布艺沙发",
@@ -153,6 +156,8 @@ SAMPLE_SOFA_DATA = [
 ]
 
 # 产品详细文档数据（为产品ID=1提供详细文档分块）
+# ⚠️ 注意：以下文档数据与产品数据关联，修改产品数据时请同步更新文档内容
+# 文档分块用于支持详细信息的语义检索，可根据实际产品特性进行调整
 SAMPLE_PRODUCT_DOCS = [
     {
         "product_id": 1,
